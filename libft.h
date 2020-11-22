@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/06 15:22:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/17 10:15:55 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/22 16:23:42 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 
 # include <stddef.h>
-# include <unistd.h>
-# include <stdlib.h>
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
