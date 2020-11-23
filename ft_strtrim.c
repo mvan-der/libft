@@ -6,11 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 13:05:27 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/14 11:50:53 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/22 19:42:01 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

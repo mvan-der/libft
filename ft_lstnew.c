@@ -6,11 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 12:22:10 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/16 09:11:41 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/22 19:42:47 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

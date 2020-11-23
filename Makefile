@@ -6,15 +6,14 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2020/11/22 11:43:44 by mvan-der      ########   odam.nl          #
+#    Updated: 2020/11/22 19:38:32 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
+NAME2 = libft.so
 HEADER = libft.h
-
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c \
@@ -38,6 +37,14 @@ OBJ = $(SRCOBJ)
 endif
 
 all: $(NAME)
+
+so : $(NAME2)
+
+$(NAME2): linuxobjects
+	$(CC) -shared -o $(NAME2) *.o
+
+linuxobjects:
+	$(CC) -fPIC -c $(SRCS) $(BONUSSRCS)
 
 $(NAME): $(OBJ)
 	ar crs $(NAME) $(OBJ)

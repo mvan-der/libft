@@ -6,12 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 16:18:32 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/22 16:01:22 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/22 20:53:38 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 static char	**ft_free(char **result)
 {
@@ -29,15 +29,22 @@ static char	**ft_free(char **result)
 
 static int	ft_cnt_str(const char *s, char c)
 {
-	int i;
-	int count;
+	int		i;
+	int		count;
+	int		checkflag;
 
 	i = 0;
-	count = 1;
+	count = 0;
+	checkflag = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		if (s[i] == c)
 		{
+			checkflag = 0;
+		}
+		else if (checkflag == 0)
+		{
+			checkflag = 1;
 			count++;
 		}
 		i++;
@@ -88,10 +95,8 @@ char		**ft_split(char const *s, char c)
 
 	if (!s)
 	{
-		printf("does it reach here?\n");
 		return (0);
 	}
-	printf("does it reach after the if statement?\n");
 	result = malloc(sizeof(char *) * (ft_cnt_str(s, c) + 1));
 	if (!result)
 		return (0);
