@@ -6,12 +6,12 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2020/11/22 19:38:32 by mvan-der      ########   odam.nl          #
+#    Updated: 2020/11/24 10:56:09 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-NAME2 = libft.so
+
 HEADER = libft.h
 CFLAGS = -Wall -Wextra -Werror
 
@@ -37,14 +37,6 @@ OBJ = $(SRCOBJ)
 endif
 
 all: $(NAME)
-
-so : $(NAME2)
-
-$(NAME2): linuxobjects
-	$(CC) -shared -o $(NAME2) *.o
-
-linuxobjects:
-	$(CC) -fPIC -c $(SRCS) $(BONUSSRCS)
 
 $(NAME): $(OBJ)
 	ar crs $(NAME) $(OBJ)
