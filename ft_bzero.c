@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 14:35:58 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/24 16:44:31 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 09:11:21 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	a = s;
-		while (i < n)
+	while (i < n)
 	{
 		a[i] = 0;
 		i++;

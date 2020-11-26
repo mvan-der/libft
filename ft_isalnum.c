@@ -6,26 +6,15 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 10:48:39 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/07 10:57:07 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 09:15:04 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_isalnum(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
-	}
-	else if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

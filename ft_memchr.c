@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 11:28:29 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/21 09:50:20 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 09:47:59 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*a;
-	unsigned char	b;
 	size_t			i;
 
 	i = 0;
 	a = (unsigned char *)s;
-	b = (unsigned char)c;
 	while (i < n)
 	{
-		if (a[i] == b)
+		if (a[i] == (unsigned char)c)
 			return (&a[i]);
 		i++;
 	}

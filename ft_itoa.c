@@ -6,11 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 14:20:39 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/22 19:48:07 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 10:05:39 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 static int	ft_count_n(long int nb)
 {
@@ -35,7 +36,7 @@ static int	ft_count_n(long int nb)
 char		*ft_itoa(int n)
 {
 	char		*str;
-	int			i;
+	size_t		i;
 	long int	nb;
 
 	nb = n;

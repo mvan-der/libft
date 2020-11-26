@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 16:18:32 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/23 15:53:04 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 10:06:45 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ static int	ft_cnt_str(const char *s, char c)
 	while (s[i])
 	{
 		if (s[i] == c)
-		{
 			checkflag = 0;
-		}
 		else if (checkflag == 0)
 		{
 			checkflag = 1;

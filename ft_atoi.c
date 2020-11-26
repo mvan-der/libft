@@ -6,9 +6,11 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 10:34:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/21 09:44:38 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 10:04:37 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 static int	ft_minmax(long int nbr, int sign)
 {
@@ -24,7 +26,7 @@ static int	ft_minmax(long int nbr, int sign)
 
 int			ft_atoi(const char *nptr)
 {
-	int			i;
+	size_t		i;
 	int			sign;
 	long int	number;
 
