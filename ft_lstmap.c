@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 16:17:11 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 11:16:38 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 14:22:00 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list *newelem;
 
 	if (!lst || !f)
-		return (0);
-	newelem = ft_lstnew(f(lst->content));
-	if (!newelem)
-	{
-		ft_lstclear(&lst, del);
-		return (0);
-	}
-	newlst = newelem;
-	lst = lst->next;
+		return (NULL);
+	newlst = NULL;
 	while (lst)
 	{
 		newelem = ft_lstnew(f(lst->content));
 		if (!newelem)
 		{
 			ft_lstclear(&newlst, del);
-			break ;
+			return (NULL) ;
 		}
 		lst = lst->next;
 		ft_lstadd_back(&newlst, newelem);
