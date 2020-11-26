@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 13:05:27 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 09:28:20 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 11:21:31 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	i;
 	int				j;
 
+	if (!s1 || !set)
+		return (0);
 	i = 0;
 	while (i < ft_strlen(s1) && ft_strchr(set, s1[i]))
 		i++;
