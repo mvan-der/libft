@@ -6,10 +6,11 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 13:05:27 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/22 19:42:01 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/24 21:40:40 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 #include <stdlib.h>
 
@@ -20,22 +21,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int				j;
 
 	i = 0;
-	j = ft_strlen(s1) - 1;
-	while (i < ft_strlen(s1))
-	{
-		if (!ft_strchr(set, s1[i]))
-			break ;
+	j = ft_strlen(s1);
+	while (i < ft_strlen(s1) && ft_strchr(set, s1[i]))
 		i++;
-	}
-	while (j >= 0)
-	{
-		if (!ft_strchr(set, s1[j]))
-			break ;
+	while (j && ft_strchr(set, s1[j]))
 		j--;
-	}
-	trimstr = malloc(j + 1 - i + 1);
-	if (trimstr == 0)
+	trimstr = ft_substr(s1, i, j);
+	if (!trimstr)
 		return (0);
-	ft_strlcpy(trimstr, s1 + i, (j + 1 - i + 1));
 	return (trimstr);
 }
