@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 12:39:57 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 11:13:15 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 15:04:53 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	if (!s1 || !s2)
 		return (0);

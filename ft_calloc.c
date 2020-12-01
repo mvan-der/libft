@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 11:30:59 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 09:12:38 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 15:01:07 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	ptr = malloc(nmemb * size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i < (nmemb * size))
 	{

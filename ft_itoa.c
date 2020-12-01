@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 14:20:39 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 10:05:39 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 15:01:48 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	ft_count_n(long int nb)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	if (nb == 0)
@@ -43,7 +43,7 @@ char		*ft_itoa(int n)
 	i = ft_count_n(nb) - 1;
 	str = ft_calloc(sizeof(char), ft_count_n(nb) + 1);
 	if (!str)
-		return (0);
+		return (NULL);
 	if (nb == 0)
 		str[ft_count_n(nb) - 1] = '0';
 	if (nb < 0)

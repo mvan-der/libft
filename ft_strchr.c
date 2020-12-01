@@ -6,14 +6,16 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 19:09:14 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 10:07:43 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 15:04:18 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	char	*a;
-	int		i;
+	size_t	i;
 
 	a = (char *)s;
 	i = 0;

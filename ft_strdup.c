@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 10:16:59 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 08:48:25 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 15:03:42 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dest;
-	int		i;
+	size_t	i;
 
 	dest = malloc(ft_strlen(s) + 1);
 	if (!dest)
