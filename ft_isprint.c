@@ -6,18 +6,13 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 11:20:02 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/03/09 16:02:34 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 16:15:30 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
 	if (c < 32 || c > 126)
-	{
 		return (0);
-	}
-	else
-	{
-		return (1);
-	}
+	return (1);
 }

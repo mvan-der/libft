@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 13:05:27 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/14 11:50:53 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 14:08:38 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	i;
 	int				j;
 
-	i = 0;
-	j = ft_strlen(s1) - 1;
-	while (i < ft_strlen(s1))
-	{
-		if (!ft_strchr(set, s1[i]))
-			break ;
-		i++;
-	}
-	while (j >= 0)
-	{
-		if (!ft_strchr(set, s1[j]))
-			break ;
-		j--;
-	}
-	trimstr = malloc(j + 1 - i + 1);
-	if (trimstr == 0)
+	if (!s1 || !set)
 		return (0);
-	ft_strlcpy(trimstr, s1 + i, (j + 1 - i + 1));
+	i = 0;
+	while (i < ft_strlen(s1) && ft_strchr(set, s1[i]))
+		i++;
+	j = ft_strlen(s1);
+	while (j > i && ft_strchr(set, s1[j]))
+		j--;
+	trimstr = ft_substr(s1, i, (j - i + 1));
 	return (trimstr);
 }

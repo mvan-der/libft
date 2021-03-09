@@ -6,12 +6,12 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 16:18:32 by mvan-der      #+#    #+#                 */
-/*   Updated: 2021/03/09 16:05:25 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 16:18:27 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 static char	**ft_free(char **result)
 {
@@ -29,15 +29,20 @@ static char	**ft_free(char **result)
 
 static int	ft_cnt_str(const char *s, char c)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	size_t	count;
+	int		checkflag;
 
 	i = 0;
-	count = 1;
+	count = 0;
+	checkflag = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		if (s[i] == c)
+			checkflag = 0;
+		else if (checkflag == 0)
 		{
+			checkflag = 1;
 			count++;
 		}
 		i++;
@@ -47,7 +52,7 @@ static int	ft_cnt_str(const char *s, char c)
 
 static int	ft_len_str(const char *s, int i, char c)
 {
-	int	len;
+	size_t len;
 
 	len = 0;
 	while (s[i] && s[i] != c)
@@ -60,7 +65,7 @@ static int	ft_len_str(const char *s, int i, char c)
 
 static void	ft_split_magic(char const *s, char c, char **result)
 {
-	int	i;
+	size_t i;
 
 	i = 0;
 	while (s[i])
@@ -87,11 +92,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 
 	if (!s)
-	{
-		printf("does it reach here?\n");
 		return (0);
-	}
-	printf("does it reach after the if statement?\n");
 	result = malloc(sizeof(char *) * (ft_cnt_str(s, c) + 1));
 	if (!result)
 		return (0);

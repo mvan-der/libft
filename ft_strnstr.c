@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 17:05:34 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/19 14:10:20 by mvan-der      ########   odam.nl         */
+/*   Updated: 2020/11/26 15:06:59 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char			*pbig;
-	unsigned int	i;
-	unsigned int	j;
+	char	*pbig;
+	size_t	i;
+	size_t	j;
 
 	pbig = (char *)big;
 	i = 0;
@@ -33,5 +33,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
