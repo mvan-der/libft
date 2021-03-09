@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 16:18:32 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/22 16:01:22 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 16:05:25 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static char	**ft_free(char **result)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (result[i])
@@ -29,8 +29,8 @@ static char	**ft_free(char **result)
 
 static int	ft_cnt_str(const char *s, char c)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 1;
@@ -47,7 +47,7 @@ static int	ft_cnt_str(const char *s, char c)
 
 static int	ft_len_str(const char *s, int i, char c)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (s[i] && s[i] != c)
@@ -60,7 +60,7 @@ static int	ft_len_str(const char *s, int i, char c)
 
 static void	ft_split_magic(char const *s, char c, char **result)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -82,7 +82,7 @@ static void	ft_split_magic(char const *s, char c, char **result)
 	*result = 0;
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
 

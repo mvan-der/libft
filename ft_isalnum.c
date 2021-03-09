@@ -6,11 +6,11 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 10:48:39 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/07 10:57:07 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 16:02:08 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

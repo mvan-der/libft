@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 10:34:50 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/21 09:44:38 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 15:58:52 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_minmax(long int nbr, int sign)
 	return (2);
 }
 
-int			ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int			i;
 	int			sign;

@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 14:20:39 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/22 15:53:39 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 16:03:01 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_count_n(int n)
 	return (count);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;

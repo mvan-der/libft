@@ -6,11 +6,11 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 10:38:18 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/07 10:47:08 by mvan-der      ########   odam.nl         */
+/*   Updated: 2021/03/09 16:02:31 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c < '0' || c > '9')
 	{
