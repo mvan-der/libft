@@ -6,7 +6,7 @@
 #    By: mvan-der <mvan-der@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 13:44:38 by mvan-der      #+#    #+#                  #
-#    Updated: 2020/11/24 13:47:45 by mvan-der      ########   odam.nl          #
+#    Updated: 2022/05/07 17:19:10 by mvan-der      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME2 = libft.so
 HEADER = libft.h
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
-ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c \
+SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isascii.c \
+ ft_isdigit.c ft_isalnum.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c \
 ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c \
 ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c \
 ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
@@ -44,13 +44,13 @@ $(NAME2): linuxobjects
 	$(CC) -shared -o $(NAME2) *.o
 
 linuxobjects:
-	$(CC) -fPIC -c $(SRCS) $(BONUSSRCS)
+	$(CC) $(CFLAGS) -fPIC -c $(SRCS) $(BONUSSRCS)
 
 $(NAME): $(OBJ)
 	ar crs $(NAME) $(OBJ)
 
 %.o : %.c $(HEADER)
-	$(CC) -c $(FLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 bonus:
 	$(MAKE) BONUS=1 all
@@ -61,6 +61,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re:
+	$(MAKE) fclean
+	$(MAKE) all
 
 .PHONY: all clean fclean re
