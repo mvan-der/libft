@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 16:18:32 by mvan-der      #+#    #+#                 */
-/*   Updated: 2022/05/07 17:35:05 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/05/07 17:44:50 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_cnt_str(const char *s, char c)
 	size_t	count;
 
 	i = 0;
-	count = 1;
+	count = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
