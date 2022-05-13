@@ -6,7 +6,7 @@
 /*   By: mvan-der <mvan-der@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 11:28:29 by mvan-der      #+#    #+#                 */
-/*   Updated: 2020/11/26 09:47:59 by mvan-der      ########   odam.nl         */
+/*   Updated: 2022/05/13 11:04:48 by mvan-der      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&a[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
